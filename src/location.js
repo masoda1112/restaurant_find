@@ -1,6 +1,7 @@
 
 function Location(){
-    navigator.geolocation.getCurrentPosition(success);
+    const location = navigator.geolocation.getCurrentPosition(success);
+    console.log(location)
   }
 
-export default Location; 
+//export default Location; 
