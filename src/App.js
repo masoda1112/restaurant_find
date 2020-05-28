@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Map from './map';
+import Info from './info';
+import Button from './button'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component{
+  render()
+  {
+    return (
+    <div>
+      <h1 class = 'title'>近くで人気のお店です</h1>
+      <div class ='info'>
+       <Info/>
+      </div>
+      <div class = 'map'>
+       <Map/>
+      </div>
+      <div class = 'button'>
+       <Button/>
+      </div>
+      
     </div>
-  );
+    );
+  }
 }
 
 export default App;
