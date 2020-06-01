@@ -15,6 +15,7 @@ code {
 .title{
   text-align: center;
   font-size:20px;
+  margin-top:15px;
 }
 
 .restaurant_info{
@@ -57,4 +58,9 @@ code {
 .button:active{
   transform: translateY(4px);/*下に動く*/
   border-bottom: none;/*線を消す*/
+}
+
+.location{
+  font-size:30px;
+  color:black;
 }
