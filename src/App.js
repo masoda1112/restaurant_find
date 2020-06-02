@@ -1,13 +1,14 @@
 import React from 'react';
 import Map from './map';
 import Info from './info';
-import Button from './button'
+import Button from './button';
+import Search from './restaurant_search'
 //import NodeEnvironment from 'jest-environment-node';
 
 class App extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {lat:0,lon:0};
+    this.state = {latitude:0,longitude:0};
   }
   render()
   {
@@ -15,7 +16,9 @@ class App extends React.Component{
       navigator.geolocation.getCurrentPosition(function(position){
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
-        this.setState({ lat : this.latitude,lon : this.longitude}); 
+        this.setState({ latitude : this.latitude,longitude : this.longitude});  //stateの更新
+        Search(this.state.latitude,this.state.longitude) //latitudeとlonを用いてSearch関数を呼び出す
+
       });}
     return (
     <div>
@@ -24,14 +27,14 @@ class App extends React.Component{
        <Info/>
       </div>
       <div class = 'map'>
-       <Map/>
+       <ReactGoogleMapLoader/>
       </div>
       <div class = 'button'>
        <Button　onClick={()=>{Location()}}></Button>
       </div>
       <div class = 'location'>
-       <p>{this.state.lat}</p>
-       <p>{this.state.lon}</p>
+       <p>{this.state.latitude}</p>
+       <p>{this.state.longitude}</p>
       </div>
       
     </div>
