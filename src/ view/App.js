@@ -2,7 +2,7 @@ import React from 'react';
 import Map from './map';
 import Info from './info';
 import Button from './button';
-import Search from './restaurant_search'
+import Search from '../controller/restaurant_search'
 //import NodeEnvironment from 'jest-environment-node';
 
 class App extends React.Component{
@@ -27,7 +27,7 @@ class App extends React.Component{
        <Info/>
       </div>
       <div class = 'map'>
-       <ReactGoogleMapLoader/>
+       <Map/>
       </div>
       <div class = 'button'>
        <Button　onClick={()=>{Location()}}></Button>

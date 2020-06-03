@@ -14,6 +14,8 @@ const bnCoord = {
   lat: 44.597923,
   lng: 0.873799,
 }
+
+class Map extends React.Component{
 const Map = () => (
     <ReactGoogleMapLoader
       params={{
@@ -39,7 +41,7 @@ const Map = () => (
       }}
     />
 )
-
+}
 export default Map;
 
 
