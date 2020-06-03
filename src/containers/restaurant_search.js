@@ -1,3 +1,4 @@
+import GoogleMap from './gmap'
 function Search(latitude,longitude){
 get(
     'http://api.gnavi.co.jp/RestSearchAPI/20150630/',
@@ -24,13 +25,5 @@ get(
     },
     'jsonp'
   );
-  RestaurantInfo();
-  Gmap();
-};
-
-function RestaurantInfo(){
-    
-};
-function Gmap(){
-    
+  GoogleMap();
 };

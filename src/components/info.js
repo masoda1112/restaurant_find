@@ -1,9 +1,10 @@
 import React from 'react';
-//import Restaurant_info from './info';
+import Search from '../containers/restaurant_search';
 
 class Info extends React.Component{
   render()
   {
+    //Searchで取ってきた情報をStateに格納する
     return (
     <div　class = 'restaurant_info'>
         <h1 className = 'name'>店名</h1>
