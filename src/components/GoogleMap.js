@@ -8,17 +8,17 @@ import GoogleMapReact from 'google-map-react'
 
 import React, { Component } from 'react';
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
-import GoogleMap from '../containers/gmap';
-import Search from '../containers/restaurant_search';
+// import GoogleMap from '../containers/gmap';
+// import Search from '../containers/restaurant_search';
 
 class GoogleMap extends Component {
   state = {
     lat: null,
     lng: null
   }
-  Search(latitude,longitude){ //resutaurant_searchからレストランの緯度経度を持って来たいのだが、この書き方ではないようだ。
-    this.setState({ lat : latitude,lng : longitude});
-  }
+  // Search(latitude,longitude){ //resutaurant_searchからレストランの緯度経度を持って来たいのだが、この書き方ではないようだ。
+  //   this.setState({ lat : latitude,lng : longitude});
+  // }
   render() {
     return (
       <Map
