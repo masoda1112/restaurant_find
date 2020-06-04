@@ -13,8 +13,12 @@ import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
 
 class GoogleMap extends Component {
   state = {
-    lat: null,
-    lng: null
+    lat: 35.681236,
+    lng: 139.767125
+  }
+  style = {
+    width: '80%',
+    height: '100px'
   }
   // Search(latitude,longitude){ //resutaurant_searchからレストランの緯度経度を持って来たいのだが、この書き方ではないようだ。
   //   this.setState({ lat : latitude,lng : longitude});
@@ -24,6 +28,7 @@ class GoogleMap extends Component {
       <Map
         google = { this.props.google }
         zoom = { 14 }
+        style={this.style}
         center = {{ lat: this.state.lat, lng: this.state.lng }}
         initialCenter = {{ lat: this.state.lat, lng: this.state.lng }}
       >
