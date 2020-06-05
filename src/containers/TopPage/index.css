@@ -15,6 +15,7 @@ code {
 .title{
   text-align: center;
   font-size:20px;
+  margin-top:15px;
 }
 
 .restaurant_info{
@@ -27,12 +28,11 @@ code {
   border-radius: 3%;
 }
 
-.gmap{
+.map{
   width:80%;
-  height:250px;
+  height:100px;
   margin:auto;
   margin-top:40px;
-  background-color:aqua;
   border-radius: 3%;
   padding:10px;
 }
@@ -57,4 +57,9 @@ code {
 .button:active{
   transform: translateY(4px);/*下に動く*/
   border-bottom: none;/*線を消す*/
+}
+
+.location{
+  font-size:30px;
+  color:black;
 }
