@@ -2,28 +2,28 @@ import React from "react";
 import RestaurantInfo from "../../components/RestaurantInfo";
 import GoogleMap from "../../components/GoogleMap";
 import RestaurantFindButton from "../../components/RestaurantFindButton";
+import {findNearestRestaurant} from "../../actions/findNearestRestaurant";
 
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = ({latitude:0,longitude:0});
+  // 現在地取得できているか確認用
+  this.state = ({latitude:0,longitude:0});
   };
 
   onSearchCurrentLocation = () => {
      navigator.geolocation.getCurrentPosition(position => {
-        let latitude = position.coords.latitude;　
-        let longitude = position.coords.longitude;
+        // latitude = position.coords.latitude;
+        // longitude = position.coords.longitude;
         // 以下現在地取得できているか確認用
-        // this.setState({latitude: position.coords.latitude});
-        // this.setState({longitude: position.coords.longitude});
+        this.setState({latitude: position.coords.latitude});
+        this.setState({longitude: position.coords.longitude});
     });
    }
 
   findRestaurant = (latitude, longitude) => {
     // TODO: 現在地から最も近い店を探す
-    this.latitude = latitude;
-    this.longitude = longitude;
-
+    findNearestRestaurant(latitude,longitude);
    }
 
   componentDidMount() {
@@ -41,14 +41,18 @@ export default class Index extends React.Component {
           <GoogleMap/>
         </div>
         <div className='button'>
-          <RestaurantFindButton onClick={() => this.findRestaurant()}/>
+          <RestaurantFindButton onClick={
+              () => this.findRestaurant(
+                  this.state.latitude,
+                  this.state.longitude
+                  )
+              }/>
         </div>
         {/* 以下現在地取得確認用 */}
-        {/* <div className='location'>
+        <div className='location'>
           <p>{this.state.latitude}</p>
           <p>{this.state.longitude}</p>
-        </div> */}
-
+        </div>
       </div>
     );
   }
