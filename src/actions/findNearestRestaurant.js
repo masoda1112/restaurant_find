@@ -11,12 +11,12 @@ export const findNearestRestaurant = (lat,lng) => {
 // const restaurant = new Restaurants(restaurantsInfo.name,restaurantsInfo.address,restaurantsInfo.id);
           let restaurant = new Array(restaurantsInfo.name,restaurantsInfo.address,restaurantsInfo.id);
           restaurantsArray.push(restaurant)
-      }
+      };
 // kuchikomiInfoの情報をkuchikomiArrayに追加
     for (var i = 0; i < restaurantsInfo.length; i++) {
         let kuchikomi = new Array(kuchikomiInfo.total_score,kuchikomiInfo.id);
         kuchikomiArray.push(kuchikomi)
-      }
+      };
 // kuchikomiArrayをtotal_scoreで降順にする
     kuchikomiArray.total_score.sort(compareFunc);
 //kuchikomiArrayのtotal_scoreの大きいレストラン順にrestaurantsArrayを探索見つけたらnearestRestaurantArrayに格納
@@ -26,9 +26,8 @@ export const findNearestRestaurant = (lat,lng) => {
             restaurantsArray.length = 0;
             kuchikomiArray.length = 0;
           break;
-        }
-      }
-    return nearestRestaurant
+        };
+      };
   }
 //　降順にするための関数
   function compareFunc(a, b) {

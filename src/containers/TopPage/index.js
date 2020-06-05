@@ -42,10 +42,7 @@ export default class Index extends React.Component {
         </div>
         <div className='button'>
           <RestaurantFindButton onClick={
-              () => this.findRestaurant(
-                  this.state.latitude,
-                  this.state.longitude
-                  )
+              () => this.findRestaurant(this.state.latitude, this.state.longitude)
               }/>
         </div>
         {/* 以下現在地取得確認用 */}
