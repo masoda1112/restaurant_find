@@ -8,13 +8,14 @@ import GoogleMapReact from 'google-map-react'
 
 import React, { Component } from 'react';
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
+import {nearestRestaurant} from '../models/restaurantData';
 // import GoogleMap from '../containers/gmap';
 // import Search from '../containers/restaurant_search';
 
 class GoogleMap extends Component {
   state = {
-    lat: 35.681236,
-    lng: 139.767125
+    lat: nearestRestaurant[nearestRestaurant.length-1][3],
+    lng: nearestRestaurant[nearestRestaurant.length-1][4]
   }
   style = {
     width: '80%',

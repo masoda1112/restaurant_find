@@ -5,8 +5,8 @@
 export let restaurantsArray = [];
 export let kuchikomiArray = [];
 export let nearestRestaurant = [
-    ["abcレストラン","東京都中央区中央町1-2-3","g600143"],
-    ["abdレストラン","東京都中央区中央町2-3-4","g600144"]
+    ["abcレストラン","東京都中央区中央町1-2-3","g600143",33.65431,131.20943],
+    ["abdレストラン","東京都中央区中央町2-3-4","g600144",35.55431,136.20943]
 ];
 
 

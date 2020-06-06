@@ -9,7 +9,7 @@ export const findNearestRestaurant = (lat,lng) => {
 // restaurantsInfoの情報をrestauransArrayに追加
     for (var i = 0; i < restaurantsInfo.length; i++) {
 // const restaurant = new Restaurants(restaurantsInfo.name,restaurantsInfo.address,restaurantsInfo.id);
-          let restaurant = new Array(restaurantsInfo.name,restaurantsInfo.address,restaurantsInfo.id);
+          let restaurant = new Array(restaurantsInfo.name,restaurantsInfo.address,restaurantsInfo.id,restaurantsInfo.latitude,restaurantsInfo.longitude);
           restaurantsArray.push(restaurant)
       };
 // kuchikomiInfoの情報をkuchikomiArrayに追加
@@ -34,7 +34,7 @@ export const findNearestRestaurant = (lat,lng) => {
     return b - a;
   }
 
-//マッキーさんが書いてくれたコードなので念のため消さない。引数が一つであり緯度経度が必要だと思ったためコメントアウト
+//マッキーさんが書いてくれたコードなので念のため消さない。引数が一つでとなっているが緯度経度の二つが必要だと思ったためコメントアウト
 // export const findNearestRestaurant = (currentLocation) => {
 //     // apiClientに実装されているAPIリクエストを呼び出してレスポンスからお店の情報を取り出して返す
 
