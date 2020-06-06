@@ -9,6 +9,7 @@ export default class Index extends React.Component {
     super(props);
   // 現在地取得できているか確認用
   this.state = ({latitude:0,longitude:0});
+
   };
 
   onSearchCurrentLocation = () => {
@@ -40,7 +41,7 @@ export default class Index extends React.Component {
         <div className='map'>
           <GoogleMap/>
         </div>
-        <div className='button'>
+        <div className='button-wrapper'>
           <RestaurantFindButton onClick={
               () => this.findRestaurant(this.state.latitude, this.state.longitude)
               }/>

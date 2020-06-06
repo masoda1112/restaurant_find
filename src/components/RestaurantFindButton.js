@@ -12,7 +12,7 @@ import React from 'react';
 class RestaurantFindButton extends React.Component{
   render() {
     return (
-      <button>レストランを見つける</button>
+      <button type='button' className='button'>現在地からレストランを見つける</button>
     );
   }
 }
