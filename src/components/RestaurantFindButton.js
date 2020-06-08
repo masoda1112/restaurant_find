@@ -10,9 +10,12 @@ import React from 'react';
 // const GRUNAVI_HOST = "https://grunavi.com/api/v1"
 
 class RestaurantFindButton extends React.Component{
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
-      <button type='button' className='button'>現在地からレストランを見つける</button>
+      <button className='button' onClick={this.props.click}>現在地からレストランを探す</button>
     );
   }
 }

@@ -4,12 +4,12 @@ import GoogleMap from "../../components/GoogleMap";
 import RestaurantFindButton from "../../components/RestaurantFindButton";
 import {findNearestRestaurant} from "../../actions/findNearestRestaurant";
 
-export default class Index extends React.Component {
+export default class TopPage extends React.Component {
   constructor(props) {
     super(props);
   // 現在地取得できているか確認用
   this.state = ({latitude:0,longitude:0});
-
+  this.findRestaurant = this.findRestaurant.bind(this);
   };
 
   onSearchCurrentLocation = () => {
@@ -42,9 +42,9 @@ export default class Index extends React.Component {
           <GoogleMap/>
         </div>
         <div className='button-wrapper'>
-          <RestaurantFindButton onClick={
-              () => this.findRestaurant(this.state.latitude, this.state.longitude)
-              }/>
+          <RestaurantFindButton
+            click={() => this.findRestaurant(this.state.latitude, this.state.longitude)} 
+          />
         </div>
         {/* 以下現在地取得確認用 */}
         <div className='location'>
